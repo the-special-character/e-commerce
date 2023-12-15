@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <style>
+        @keyframes test {
+            10% {
+                scale: 1.1;
+                translate: 20px;
+                rotate: 10deg;
+                
+            }
+            30% {
+                scale: 1.4;
+                translate: 200px;
+                rotate: 50deg;
+            }
+            60% {
+                scale: 1.3;
+                translate: 100px;
+                rotate: 80deg;
+            }
+            100% {
+                scale: 1;
+                translate: 0px;
+                rotate: 0deg;
+            }
+        }
+
+
+      main {
+        display: grid;
+        place-content: center;
+        height: 100vh;
+      }
+
+      .ball {
+        height: 100px;
+        aspect-ratio: 1 / 1;
+        background-color: red;
+        /* border-radius: 50%; */
+        /* transition: all 1s cubic-bezier(1,-0.25,.3,.59); */
+      }
+
+      .ball:hover {
+        animation: test 1s ease-in-out 0s infinite forwards;
+      }
+
+
+      /* main:has(button:hover) > .ball {
+        opacity: 0;
+      }
+
+      main:has(button:hover) > .ball:hover {
+        opacity: 1;
+      } */
+
+
+    </style>
+  </head>
+  <body>
+    <main>
+        <div class="ball"></div>
+        <!-- <button type="button">animate</button> -->
+    </main>
+  </body>
+</html>
